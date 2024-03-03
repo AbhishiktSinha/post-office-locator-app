@@ -5,25 +5,39 @@
     row-gap: 20px;
     padding: 12px;
 
-
-    .input-container {
+    >header {
+        position: sticky;
+        top: 0;
         display: flex;
-        align-items: center;
-        padding: 4px;
-        column-gap: 4px;
+        flex-direction: column;
+        row-gap: 20px;
 
-        border: 1px solid #282828;
-        border-radius: 4px;
+        padding-bottom: 15px;
 
-        >span {            
-            border-radius: 50%;
-        }
-
-        >input {
-            flex-grow: 1;
-            font-size: 18px;
+        z-index: 500;
+        background: #ffffff;
+        
+        .input-container {
+            display: flex;
+            align-items: center;
+            padding: 4px;
+            column-gap: 4px;
+    
+            border: 1px solid #282828;
+            border-radius: 4px;
+    
+            >span {            
+                border-radius: 50%;
+            }
+    
+            >input {
+                flex-grow: 1;
+                font-size: 18px;
+            }
         }
     }
+
+
 
     .post-offices-cards-container {
         width: 100%;

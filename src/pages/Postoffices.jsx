@@ -41,16 +41,19 @@ export default function PostOFfices() {
 
     return (
         <div className="post-offices-container">
-            <h2 className="pincode-container">Pincode: {pincode}</h2>
-            <div className="message-container"><b>Message: </b>{message}</div>
+            <header>
 
-            <div className="input-container">
-                <span className="search-icon material-symbols-outlined">search</span>
-                <input 
-                    onChange={(e)=>onChangeHandler(e)}
-                    type="text" 
-                    className="post-office-input" />
-            </div>
+                <h2 className="pincode-container">Pincode: {pincode}</h2>
+                <div className="message-container"><b>Message: </b>{message}</div>
+
+                <div className="input-container">
+                    <span className="search-icon material-symbols-outlined">search</span>
+                    <input
+                        onChange={(e) => onChangeHandler(e)}
+                        type="text"
+                        className="post-office-input" />
+                </div>
+            </header>
 
             <div className="post-offices-cards-container">
                 {
