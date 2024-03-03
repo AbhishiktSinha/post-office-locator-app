@@ -2,10 +2,13 @@
 .form-container {
 
     width: 100%;
+    max-width: 670px;
     height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    margin-inline: auto;
 
     padding: 12px;
 
