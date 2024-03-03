@@ -6,6 +6,7 @@ import debouncer from "../utils/debouncer";
 import filterPostOffices from "../utils/filterPostOffices";
 import PostOfficeCard from "../components/PostOfficeCard";
 import '../styles/PostOffices.css'
+import { Link, useNavigate } from "react-router-dom";
 
 
 let debouncedSearch = null;
@@ -16,6 +17,8 @@ export default function PostOFfices() {
     const {postOfficeList, message, pincode} = data;
 
     const [list, setList] = useState(filterPostOffices(postOfficeList, ''));
+
+    const navigate = useNavigate()
 
     useEffect(()=>{
         debouncedSearch = debouncer((query)=> {
@@ -42,6 +45,8 @@ export default function PostOFfices() {
     return (
         <div className="post-offices-container">
             <header>
+
+                <Link to={'../home'}>Go Home</Link>
 
                 <h2 className="pincode-container">Pincode: {pincode}</h2>
                 <div className="message-container"><b>Message: </b>{message}</div>

@@ -10,7 +10,7 @@ import '../styles/Form.css'
 
 
 
-const {FETCH_POSTAL_DATA, SET_ERROR} = ActionTypes;
+const {FETCH_POSTAL_DATA, SET_ERROR, REVERT_STATUS} = ActionTypes;
 
 export default function Form() {
 
@@ -36,6 +36,7 @@ export default function Form() {
 
     useEffect(()=>{
         if (appStatus === 'success') {
+            dispatch({type: REVERT_STATUS})
             navigate('../post-offices')
         }
     }, [appStatus])

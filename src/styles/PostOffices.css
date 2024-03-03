@@ -16,6 +16,14 @@
 
         z-index: 500;
         background: #ffffff;
+
+        >a {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+
+            color: #282828;
+        }
         
         .input-container {
             display: flex;

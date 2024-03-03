@@ -20,7 +20,7 @@ export default function postalReducer(state=initialState, action) {
         case REVERT_STATUS :
             return {
                 ...state,
-                ...initialState
+                status: 'init',
             }
 
         case SET_ERROR :

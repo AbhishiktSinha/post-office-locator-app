@@ -14,6 +14,7 @@ function App() {
     <>
       <Routes>
         <Route path='' element={<Suspense><Form/></Suspense>} />
+        <Route path='/home' element={<Suspense><Form/></Suspense>} />
         <Route path='/post-offices' element={<Suspense><PostOffices/></Suspense>} />
       </Routes>
     </>

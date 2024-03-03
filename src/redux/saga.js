@@ -22,7 +22,8 @@ function* fetchPostalData(action) {
     yield put( {type: FETCH_REQUEST_STARTED} );
 
     const httpConfig = {
-        url: `${baseUrl}/${pincode}`
+        url: `${baseUrl}/${pincode}`,
+        method: 'get'
     }
     
     
