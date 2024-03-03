@@ -16,8 +16,7 @@ export default function ErrorMessage() {
 
     useEffect(()=>{
         
-        timerId = setTimeout(()=>{
-            console.log('hiding error message');
+        timerId = setTimeout(()=>{            
             dispatch({ type: REVERT_STATUS })
         }, 1800)
 

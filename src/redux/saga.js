@@ -15,8 +15,7 @@ export default function* postalSaga() {
 }
 
 function* fetchPostalData(action) {
-
-    console.log(action);
+    
     const {type, payload: pincode} = action;
 
     yield put( {type: FETCH_REQUEST_STARTED} );
@@ -37,9 +36,7 @@ function* fetchPostalData(action) {
         if (error) {
             throw new Error( error );
         }
-
-        
-        console.log(data[0].Message, data[0].PostOffice);
+            
         yield put( { type: FETCH_SUCCESS, payload: {
             pincode: pincode,
             message: data[0].Message,
