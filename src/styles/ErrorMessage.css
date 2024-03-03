@@ -1,0 +1,70 @@
+.error-backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #3131313b;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+    .error-card {
+        display: flex;
+        flex-direction: column;
+        row-gap: 12px;
+        
+        position: relative;
+        opacity: 1;
+                
+        animation: errorCardEntry 0.4s linear;
+
+        min-width: 200px;        
+        padding: 12px;
+
+        border-radius: 8px;
+        background-color: #fff;
+
+        font-weight: 500;
+
+        >p:first-child {
+            color: #d32d2d;
+            font-size: 22px;
+        }
+
+        .cancel-error-btn {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+
+            background-color: #d32d2d;
+        }
+
+    }    
+}
+
+@keyframes errorCardEntry {
+    from {
+        /* transform: translateX(20px); */
+        opacity: 0;
+    }
+    to {
+        /* transform: translate(0); */
+        opacity: 1;
+    }
+}
+
+@keyframes errorCardLeave {
+    from {
+        /* transform: translate(0); */
+        opacity: 1;
+    }
+    to {
+        /* transform: translateX(-20px); */
+        opacity: 0;
+    }
+}

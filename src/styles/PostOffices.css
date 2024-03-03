@@ -1,0 +1,41 @@
+.post-offices-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 12px;
+
+
+    .input-container {
+        display: flex;
+        align-items: center;
+        padding: 4px;
+        column-gap: 4px;
+
+        border: 1px solid #282828;
+        border-radius: 4px;
+
+        >span {            
+            border-radius: 50%;
+        }
+
+        >input {
+            flex-grow: 1;
+            font-size: 18px;
+        }
+    }
+
+    .post-offices-cards-container {
+        width: 100%;
+
+        display: flex;
+        flex-wrap: wrap;
+
+        gap: 20px;
+
+        >div {
+            border-radius: 8px;            
+        }
+    }
+
+}
